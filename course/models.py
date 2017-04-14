@@ -11,7 +11,7 @@ class Course(models.Model):
     learning_num = models.IntegerField(default=0, verbose_name="学习人数")
     favor_num = models.IntegerField(default=0, verbose_name="收藏人数")
     click_num = models.IntegerField(default=0, verbose_name="点击量")
-    image = models.ImageField(upload_to="image/%Y/%m", default="image/default.png", max_length=128, verbose_name="课程封面")
+    image = models.ImageField(upload_to="course/%Y/%m", default="course/default.png", max_length=128, verbose_name="课程封面")
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
 
     def __str__(self):
