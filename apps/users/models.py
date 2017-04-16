@@ -3,6 +3,7 @@ from datetime import datetime
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 class UserProfile(AbstractUser):
     nickname = models.CharField(max_length=16, verbose_name="昵称", default=" ")
     birthday = models.DateTimeField(verbose_name="出生日期", null=True, blank=True)

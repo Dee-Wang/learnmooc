@@ -2,7 +2,6 @@
 from datetime import datetime
 
 from django.db import models
-q
 from users.models import UserProfile
 from course.models import Course
 
