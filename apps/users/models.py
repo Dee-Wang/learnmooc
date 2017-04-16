@@ -23,11 +23,12 @@ class UserProfile(AbstractUser):
 class EmailVerifyRecord(models.Model):
     code = models.CharField(max_length=8, verbose_name="验证码")
     email = models.CharField(max_length=32, verbose_name="邮箱")
-    send_type = models.CharField(max_length=8, choices=(("register","注册"), ("forget password","忘记密码")), default="register", verbose_name="验证类型")
+    send_type = models.CharField(max_length=16, choices=(("register","注册"), ("forget password","忘记密码")), default="register", verbose_name="验证类型")
     send_time = models.DateTimeField(default=datetime.now)
 
     class Meta:
         verbose_name = "邮箱验证码"
+        verbose_name_plural = verbose_name
         verbose_name_plural = verbose_name
 
 

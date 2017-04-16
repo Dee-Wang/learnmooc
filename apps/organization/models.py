@@ -45,6 +45,8 @@ class Teacher(models.Model):
     favor_num = models.IntegerField(default=0, verbose_name="收藏人数")
     click_num = models.IntegerField(default=0, verbose_name="点击量")
     phone_num = models.CharField(max_length=16, verbose_name="联系方式")
+    image = models.ImageField(upload_to="organization/teahers/%Y/%m", default="organization/teachers/default.png", max_length=128,
+                              verbose_name="讲师照片")
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
 
     def __str__(self):
